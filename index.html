@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FormularzoSheetoDoks</title>
+  <link rel="stylesheet" href="./ostylowanie.css">
+  <script src="./roboto.js?to=window.roboto"></script>
+</head>
+<body>
+  <canvas id="canvas" width="1800" height="800"></canvas>
+  <div id="ods1" class="box" style="width: 573px; height: 406px; left: 102px; top: 59px;">
+    <h2>Arkusz z pytaniami</h2>
+    <table border="1" cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <td>Nr pytania</td>
+          <td>Treść pytania</td>
+          <td>Odpowiedzi (po przecinku)</td>
+          <td>Indeks poprawnej odpowiedzi (od 0)</td>
+          <td>Punkty za poprawną odp.</td>
+        </tr>
+      </thead>
+      <tbody id="$data" contenteditable oninput="console.info(window.$data || event.target, buildForm(event.target, window.$form))">
+        <tr>
+          <td>1</td>
+          <td>Kto wynalazł komputer osobisty?</td>
+          <td>Jacek Karpiński,Steve Jobs,Roman Kluska,Bill Stairs</td>
+          <td>0</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Kto zbudował polską firmę komputerową?</td>
+          <td>Steve Jobs,Roman Kluska</td>
+          <td>1</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>TAG to twór</td>
+          <td>Spółdzielni Informatyków InfoService,Spółdzielni Informatyków InfoSoft,Spółdzielni Informatyków DeleteSoft</td>
+          <td>0</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Która instytucja doprowadziła do zabicia pierwszego dużego przedsiębiorstwa sprzedającego komputery na polskim rynku?</td>
+          <td>US,NIK,GUS,firma trwa nadal</td>
+          <td>0</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <!-- jak otrzymam środki - poproszę starzystę, żeby doimplementował dodawanie wierszy -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="form" class="box" style="width: 573px; height: 406px; left: 902px; top: 259px;">
+    <h2>Formularz</h2>
+    <div id="$form"></div>
+  </div>
+
+  <div id="pdf" class="box" style="width: 573px;height: 406px;left: 1560px;top: 625px; display: flex;flex-direction: column">
+    <h2>PDF</h2>
+    <div id="$pdf" style="flex: 1"></div>
+  </div>
+
+  <div id="ods2" class="box" style="width: 573px;height: 406px;left: 1560px;top: 59px;">
+    <h2>Arkusz z odpowiedziami</h2>
+    <table border="1" cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <td>id</td>
+          <td>date</td>
+          <td>JSON</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="3">(wyślij formularz, by zobaczyć odpowiedzi)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ <a href='https://www.free-counters.org/'>www.Free-Counters.org</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=7bb6cacfa1201f331c3aab175560dff4da71f73d'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1057909/t/1"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+  <script src="./aplikacja.js"></script>
+</body>
+</html>
