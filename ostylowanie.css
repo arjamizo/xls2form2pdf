@@ -1,0 +1,17 @@
+.box {
+  border: 1px solid darkgray;
+  border-radius: 30px;
+  width: 300px;
+  height: 200px;
+  resize: both;
+  position: absolute;
+  overflow: auto;
+}
+
+#canvas {
+  position: absolute;
+}
+
+.form-submit {
+  margin-bottom: 20px;
+}
